@@ -1,0 +1,18 @@
+package com.app.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.app.pojos.Company;
+
+@Repository
+public interface CompanyRepository extends  JpaRepository<Company,Integer> {
+
+	Company findByEmail(String email);
+
+	Company findByEmailAndPassword(String email, String password);
+
+	
+
+	
+}
